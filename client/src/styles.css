@@ -1,0 +1,156 @@
+:root {
+  --bg: #0b1220;
+  --bg-2: #0e1526;
+  --card: #121a2b;
+  --card-border: #1f2a44;
+  --text: #e6e9f0;
+  --muted: #9aa5b1;
+  --primary: #6ea8fe;
+  --primary-600: #4f93ff;
+  --danger: #ff6b6b;
+  --success: #3ddc97;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 800px at 10% 10%, #14203b 0%, transparent 50%),
+              radial-gradient(1200px 800px at 90% 0%, #0f2457 0%, transparent 50%),
+              radial-gradient(1200px 800px at 50% 100%, #0b3b3b 0%, transparent 55%),
+              linear-gradient(180deg, var(--bg) 0%, var(--bg-2) 100%);
+}
+
+.app {
+  max-width: 880px;
+  margin: 48px auto;
+  padding: 0 20px 40px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.2;
+  background: linear-gradient(90deg, #5e76ec 0%, #74b0fa 35%, #5c53e0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+}
+
+.card {
+  background: rgba(18, 26, 43, 0.75);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  box-shadow: 0 10px 30px var(--shadow);
+  backdrop-filter: saturate(120%) blur(6px);
+}
+
+.uploadCard { padding: 16px; margin-top: 18px; }
+
+.uploadForm { display: flex; gap: 12px; align-items: center; flex-wrap: wrap; }
+
+input[type="file"] {
+  color: var(--muted);
+}
+
+.btn {
+  appearance: none;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, background 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn:active { transform: translateY(1px); }
+
+.btn-primary {
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-600) 100%);
+  color: #0b1220;
+  box-shadow: 0 6px 16px rgba(78, 148, 255, 0.35);
+}
+
+.btn-primary:hover { filter: brightness(1.06); }
+
+ .btn-ghost {
+   background: transparent;
+   color: var(--text);
+   border-color: var(--card-border);
+ }
+ 
+ .btn-blue {
+   background: linear-gradient(180deg, #6ea8fe 0%, #4f93ff 100%);
+   color: #0b1220;
+   border-color: transparent;
+   box-shadow: 0 6px 16px rgba(78, 148, 255, 0.35);
+ }
+ .btn-blue:hover { filter: brightness(1.06); }
+ 
+ .btn-red {
+   background: linear-gradient(180deg, #ff7b7b 0%, #ff5b5b 100%);
+   color: #0b1220;
+   border-color: transparent;
+   box-shadow: 0 6px 16px rgba(255, 91, 91, 0.35);
+ }
+ .btn-red:hover { filter: brightness(1.06); }
+
+.btn-ghost:hover { background: rgba(255,255,255,0.04); }
+
+.alert { margin: 12px 0 0; padding: 10px 12px; border-radius: 10px; font-weight: 500; }
+.alert-error { background: rgba(255, 107, 107, 0.12); border: 1px solid rgba(255, 107, 107, 0.35); color: #ffd3d3; }
+.alert-success { background: rgba(61, 220, 151, 0.12); border: 1px solid rgba(61, 220, 151, 0.35); color: #d3ffec; }
+
+.listCard { margin-top: 20px; padding: 8px; }
+
+.listHeader { padding: 10px 12px; color: var(--muted); font-weight: 600; }
+
+.fileList { list-style: none; padding: 8px; margin: 0; display: grid; gap: 10px; }
+
+.fileItem {
+  border: 1px solid var(--card-border);
+  background: rgba(13, 20, 36, 0.7);
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 160ms ease, transform 120ms ease, background 160ms ease;
+}
+
+.fileItem:hover { border-color: #34518b; background: rgba(20, 31, 56, 0.7); }
+
+.fileMeta { display: grid; gap: 4px; }
+.fileName { font-weight: 700; letter-spacing: 0.2px; }
+.fileSub { color: var(--muted); font-size: 12px; }
+
+.actions { display: flex; gap: 8px; }
+
+.empty {
+  color: var(--muted);
+  padding: 24px;
+  text-align: center;
+}
+
+
